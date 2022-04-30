@@ -9,7 +9,6 @@ class Form {
 
   constructor() {
     makeObservable(this, {
-      data: observable,
       name: observable,
       surname: observable,
       phone: observable,
