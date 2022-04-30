@@ -3,9 +3,9 @@ import store from '../../store/store';
 
 function App() {
   return (
-    <div className="App">
-      text
-    </div>
+    <>
+      
+    </>
   );
 }
 
