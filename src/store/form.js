@@ -1,11 +1,15 @@
-import { makeObservable, observable } from 'mobx';
+import { makeObservable, observable } from 'mobx'
 
 class Form {
-  name = '';
-  surname = '';
-  phone = '';
-  email = '';
-  message = '';
+  name = ''
+
+  surname = ''
+
+  phone = ''
+
+  email = ''
+
+  message = ''
 
   constructor() {
     makeObservable(this, {
@@ -14,10 +18,10 @@ class Form {
       phone: observable,
       email: observable,
       message: observable,
-    });
+    })
   }
 }
 
-const form = new Form();
+const form = new Form()
 
-export default form;
+export default form

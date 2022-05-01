@@ -1,12 +1,8 @@
-import { observer } from 'mobx-react';
-import store from '../../store/store';
+import { observer } from 'mobx-react'
+// import store from '../../store/store'
 
 function App() {
-  return (
-    <>
-      
-    </>
-  );
+  return <>Hello!</>
 }
 
-export default observer(App);
+export default observer(App)
