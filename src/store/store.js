@@ -8,11 +8,17 @@ import form from './form';
 
 class Store {
   news = news;
+
   industrials = industrials;
+
   projects = projects;
+
   publications = publications;
+
   command = command;
+
   clients = clients;
+
   form = form;
 }
 

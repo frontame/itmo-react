@@ -11,8 +11,8 @@ class Clients {
   }
 
   getClients = () => {
-
-  }
+    this.data = null; // временно (чтобы не было ошибки ESLint)
+  };
 }
 
 const clients = new Clients();
