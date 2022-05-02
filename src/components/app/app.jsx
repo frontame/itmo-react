@@ -2,7 +2,7 @@ import { observer } from 'mobx-react';
 // import store from '../../store/store'
 
 function App({ kek }) {
-  return <div>{kek}Hello</div>;
+  return <div className="kek">{kek}Hello</div>;
 }
 
 export default observer(App);
