@@ -1,10 +1,10 @@
 import { observer } from 'mobx-react';
-import store from '../../store/store';
+import Publications from '../Publications';
 
 function App() {
   return (
     <>
-      
+      <Publications />
     </>
   );
 }

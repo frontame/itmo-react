@@ -9,7 +9,7 @@ import publication7 from '../images/publications/publication7.jpg';
 import publication8 from '../images/publications/publication8.jpg';
 import publication9 from '../images/publications/publication9.jpg';
 
-export const publications = [
+const publicationsData = [
   {
     id: 1,
     image: publication1,
@@ -83,3 +83,5 @@ export const publications = [
     link: '#'
   },
 ];
+
+export default publicationsData;

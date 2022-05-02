@@ -1,4 +1,5 @@
-import { action, makeObservable, observable } from 'mobx';
+import { action, makeObservable, observable, runInAction } from 'mobx';
+import publicationsData from '../data/publicationsData';
 
 class Publications {
   data = [];
@@ -6,12 +7,14 @@ class Publications {
   constructor() {
     makeObservable(this, {
       data: observable,
-      getPublications: action,
+      loadPublications: action,
     });
+
+    runInAction(this.loadPublications);
   }
 
-  getPublications = () => {
-
+  loadPublications = () => {
+    this.data = publicationsData;
   }
 }
 
