@@ -1,27 +1,27 @@
-import news from './news'
-import industrials from './industrials'
-import projects from './projects'
-import publications from './publications'
-import command from './command'
-import clients from './clients'
-import form from './form'
+import news from './news';
+import industrials from './industrials';
+import projects from './projects';
+import publications from './publications';
+import command from './command';
+import clients from './clients';
+import form from './form';
 
 class Store {
-  news = news
+  news = news;
 
-  industrials = industrials
+  industrials = industrials;
 
-  projects = projects
+  projects = projects;
 
-  publications = publications
+  publications = publications;
 
-  command = command
+  command = command;
 
-  clients = clients
+  clients = clients;
 
-  form = form
+  form = form;
 }
 
-const store = new Store()
+const store = new Store();
 
-export default store
+export default store;

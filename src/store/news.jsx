@@ -1,20 +1,20 @@
-import { action, makeObservable, observable } from 'mobx'
+import { action, makeObservable, observable } from 'mobx';
 
 class News {
-  data = []
+  data = [];
 
   constructor() {
     makeObservable(this, {
       data: observable,
       getNews: action,
-    })
+    });
   }
 
   getNews = () => {
-    this.data = null // временно (чтобы не было ошибки ESLint)
-  }
+    this.data = null; // временно (чтобы не было ошибки ESLint)
+  };
 }
 
-const news = new News()
+const news = new News();
 
-export default news
+export default news;
