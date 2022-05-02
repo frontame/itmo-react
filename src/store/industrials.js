@@ -11,8 +11,8 @@ class Industrials {
   }
 
   getIndustrials = () => {
-
-  }
+    this.data = null; // временно (чтобы не было ошибки ESLint)
+  };
 }
 
 const industrials = new Industrials();

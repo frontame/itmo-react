@@ -2,9 +2,13 @@ import { makeObservable, observable } from 'mobx';
 
 class Form {
   name = '';
+
   surname = '';
+
   phone = '';
+
   email = '';
+
   message = '';
 
   constructor() {

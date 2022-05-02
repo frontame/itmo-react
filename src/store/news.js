@@ -11,8 +11,8 @@ class News {
   }
 
   getNews = () => {
-
-  }
+    this.data = null; // временно (чтобы не было ошибки ESLint)
+  };
 }
 
 const news = new News();
