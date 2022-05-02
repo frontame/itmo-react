@@ -1,5 +1,5 @@
-import { createGlobalStyle } from 'styled-components'
-import { normalize } from 'styled-normalize'
+import { createGlobalStyle } from 'styled-components';
+import { normalize } from 'styled-normalize';
 
 const GlobalStyles = createGlobalStyle`
   ${normalize}
@@ -64,6 +64,6 @@ const GlobalStyles = createGlobalStyle`
   #root {
     // тут стили размера экрана и тд (тк в реакте все рендерится в <div id="root"></div>, а не в body)
   }
-`
+`;
 
-export default GlobalStyles
+export default GlobalStyles;
