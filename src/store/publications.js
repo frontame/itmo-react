@@ -11,8 +11,8 @@ class Publications {
   }
 
   getPublications = () => {
-
-  }
+    this.data = null; // временно (чтобы не было ошибки ESLint)
+  };
 }
 
 const publications = new Publications();

@@ -11,8 +11,8 @@ class Command {
   }
 
   getCommand = () => {
-
-  }
+    this.data = null; // временно (чтобы не было ошибки ESLint)
+  };
 }
 
 const command = new Command();

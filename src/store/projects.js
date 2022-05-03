@@ -11,8 +11,8 @@ class Projects {
   }
 
   getProjects = () => {
-
-  }
+    this.data = null; // временно (чтобы не было ошибки ESLint)
+  };
 }
 
 const projects = new Projects();
