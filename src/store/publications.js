@@ -15,7 +15,7 @@ class Publications {
 
   loadPublications = () => {
     this.data = publicationsData;
-  }
+  };
 }
 
 const publications = new Publications();

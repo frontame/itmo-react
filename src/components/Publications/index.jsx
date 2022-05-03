@@ -1,27 +1,22 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
-import { Section, Container, Title } from "./styles";
+import { Section, Container, Title } from './styles';
 import store from '../../store/store';
-import Publication from '../Publication/';
+import Publication from '../Publication';
 
-const Publications = () => {
+function Publications() {
   const { data } = store.publications;
 
-  return(
+  return (
     <Section>
       <Container>
         <Title>Публикации</Title>
-        <Swiper
-          spaceBetween={30}
-          slidesPerView={3}
-        >
-          {data.map((publication, item) => {
-            return (
-              <SwiperSlide key={item} >
-                <Publication data={publication} />
-              </SwiperSlide>
-            );
-          })}
+        <Swiper spaceBetween={30} slidesPerView={3}>
+          {data.map((publication) => (
+            <SwiperSlide key={publication.id}>
+              <Publication data={publication} />
+            </SwiperSlide>
+          ))}
         </Swiper>
       </Container>
     </Section>

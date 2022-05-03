@@ -1,8 +1,8 @@
 import { observer } from 'mobx-react';
-// import store from '../../store/store'
+import Publications from '../Publications';
 
-function App({ kek }) {
-  return <div className="kek">{kek}Hello</div>;
+function App() {
+  return <Publications />;
 }
 
 export default observer(App);

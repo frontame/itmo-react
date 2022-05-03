@@ -24,6 +24,7 @@
   "rules": {
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
     "prettier/prettier": "error",
-    "react/prop-types": 0 // Отключаем правило проверки передаваемых типов.
+    "react/prop-types": 0, // Отключаем правило проверки передаваемых типов.
+    "import/no-unresolved": [2, { "ignore": ["swiper/react", "swiper/css"] }]
   }
 }

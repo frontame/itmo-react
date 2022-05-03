@@ -15,7 +15,7 @@ export const ImageContainer = styled.div`
   width: 310px;
   height: 223px;
   border-radius: 10px;
-  transition: all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 `;
 
 export const Information = styled.div`
@@ -54,10 +54,10 @@ export const Links = styled.div`
   position: absolute;
   left: 0;
   bottom: -70px;
-  transition: all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 `;
 
-export const Link = styled.a`
+export const LinkText = styled.a`
   font: 600 18px/30px OpenSans;
   color: #ffffff;
   text-decoration: none;

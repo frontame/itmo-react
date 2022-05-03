@@ -1,13 +1,22 @@
-import { Container, ImageContainer, Information, Title, Authors, Limb, Links, Link, Button } from "./styles";
+import {
+  Container,
+  ImageContainer,
+  Information,
+  Title,
+  Authors,
+  Limb,
+  Links,
+  LinkText,
+  Button,
+} from './styles';
 
-const Publication = ({ data }) => {
-
+function Publication({ data }) {
   const { image, title, authors, limb } = data;
 
-  return(
+  return (
     <Container>
       <ImageContainer>
-        <img src={image} alt={title} width={'311px'} />
+        <img src={image} alt={title} width="311px" />
       </ImageContainer>
       <Information>
         <Title>{title}</Title>
@@ -15,8 +24,8 @@ const Publication = ({ data }) => {
         <Limb>{limb}</Limb>
       </Information>
       <Links>
-        <Link>Читать полностью</Link>
-        <Button></Button>
+        <LinkText>Читать полностью</LinkText>
+        <Button />
       </Links>
     </Container>
   );
