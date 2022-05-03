@@ -1,5 +1,8 @@
 import styled from 'styled-components';
 
+import rightArrow from '../../images/publication-arrow-right.svg';
+import shareIcon from '../../images/publication-share-button.svg';
+
 export const Container = styled.div`
   width: 348px;
   height: 548px;
@@ -18,6 +21,14 @@ export const ImageContainer = styled.div`
   transition: all 0.3s ease-in-out;
 `;
 
+export const Image = styled.img`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: all 0.3s linear;
+`;
+
 export const Information = styled.div`
   padding: 20px 20px 30px;
 `;
@@ -31,7 +42,7 @@ export const Title = styled.h4`
 export const Authors = styled.p`
   font: italic 400 14px/19px OpenSans;
   color: #009fac;
-  margin: 0 0 4px;
+  margin: 0 0 20px;
 `;
 
 export const Limb = styled.p`
@@ -53,7 +64,8 @@ export const Links = styled.div`
   align-items: center;
   position: absolute;
   left: 0;
-  bottom: -70px;
+  /* bottom: -70px; */
+  bottom: 0;
   transition: all 0.3s ease-in-out;
 `;
 
@@ -64,10 +76,29 @@ export const LinkText = styled.a`
   position: relative;
   padding-right: 8px;
   box-sizing: border-box;
+  cursor: pointer;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 4px;
+    right: -24px;
+    background-image: url(${rightArrow});
+    background-size: 24px 24px;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 24px;
+    height: 24px;
+    transition: all 0.3s linear;
+  }
+
+  &:hover::after {
+    right: -32px;
+  }
 `;
 
 export const Button = styled.button`
-  background-image: url(../../images/share-button.svg);
+  background-image: url(${shareIcon});
   background-size: 24px 24px;
   background-repeat: no-repeat;
   background-position: center right;
