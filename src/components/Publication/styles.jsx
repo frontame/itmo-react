@@ -12,10 +12,16 @@ export const Container = styled.div`
   background-color: #ffffff;
   position: relative;
   overflow: hidden;
+
+  @media (max-width: 1280px) {
+    width: 330px;
+    height: 515px;
+    margin-bottom: 40px;
+  }
 `;
 
 export const ImageContainer = styled.div`
-  padding: 20px 19px 0;
+  padding: 20px 20px 0;
   width: 310px;
   height: ${(props) => {
     return props.height;
@@ -23,6 +29,11 @@ export const ImageContainer = styled.div`
   border-radius: 10px;
   transition: all 0.3s ease-in-out;
   overflow: hidden;
+
+  @media (max-width: 1280px) {
+    width: 291px;
+    height: 158px;
+  }
 `;
 
 export const Image = styled.img`
@@ -36,6 +47,11 @@ export const Image = styled.img`
 export const Information = styled.div`
   padding: 20px 20px 30px;
   min-height: 305px;
+
+  @media (max-width: 1280px) {
+    padding-bottom: 10px;
+    min-height: unset;
+  }
 `;
 
 export const Title = styled.h4`
@@ -48,6 +64,9 @@ export const Authors = styled.p`
   font: italic 400 14px/19px OpenSans;
   color: #009fac;
   margin: 0 0 20px;
+  @media (max-width: 1280px) {
+    margin-bottom: 12px;
+  }
 `;
 
 export const Limb = styled.p`
@@ -73,6 +92,15 @@ export const Links = styled.div`
     return props.visible ? '0' : '-70';
   }};
   transition: all 0.3s ease-in-out;
+
+  @media (max-width: 1280px) {
+    height: 60px;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: static;
+    left: unset;
+    bottom: unset;
+  }
 `;
 
 export const LinkText = styled.a`

@@ -23,6 +23,10 @@ const Button = styled.button`
   transform: ${(props) => {
     return props.direction === 'next' ? 'unset' : 'rotate(180deg)';
   }};
+
+  @media (max-width: 1280px) {
+    display: none;
+  }
 `;
 
 export default Button;
