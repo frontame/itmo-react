@@ -10,7 +10,7 @@ import {
   Button,
 } from './styles';
 
-function Publication({ data }) {
+const Publication = ({ data }) => {
   const { image, title, authors, limb } = data;
 
   return (
@@ -29,6 +29,6 @@ function Publication({ data }) {
       </Links>
     </Container>
   );
-}
+};
 
 export default Publication;

@@ -11,7 +11,7 @@ export const Container = styled.div`
   margin: 0 auto;
 `;
 
-export const Title = styled.h1`
+export const Title = styled.h2`
   font-family: OpenSans;
   font-size: 36px;
   line-height: 68px;

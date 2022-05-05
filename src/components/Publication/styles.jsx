@@ -6,6 +6,7 @@ import shareIcon from '../../images/publication-share-button.svg';
 export const Container = styled.div`
   width: 348px;
   height: 548px;
+  margin-bottom: 70px;
   box-shadow: 0px 4px 20px rgba(1, 54, 157, 0.15);
   border-radius: 10px;
   background-color: #ffffff;
