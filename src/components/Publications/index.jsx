@@ -36,3 +36,6 @@ const Publications = () => {
 };
 
 export default Publications;
+
+// onMouseDown onMouseEnter onMouseLeave
+// onMouseMove onMouseOut onMouseOver onMouseUp

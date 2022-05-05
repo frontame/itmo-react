@@ -17,9 +17,12 @@ export const Container = styled.div`
 export const ImageContainer = styled.div`
   padding: 20px 19px 0;
   width: 310px;
-  height: 223px;
+  height: ${(props) => {
+    return props.height;
+  }};
   border-radius: 10px;
   transition: all 0.3s ease-in-out;
+  overflow: hidden;
 `;
 
 export const Image = styled.img`
@@ -32,6 +35,7 @@ export const Image = styled.img`
 
 export const Information = styled.div`
   padding: 20px 20px 30px;
+  min-height: 305px;
 `;
 
 export const Title = styled.h4`
@@ -65,8 +69,9 @@ export const Links = styled.div`
   align-items: center;
   position: absolute;
   left: 0;
-  /* bottom: -70px; */
-  bottom: 0;
+  bottom: ${(props) => {
+    return props.visible ? '0' : '-70';
+  }};
   transition: all 0.3s ease-in-out;
 `;
 
