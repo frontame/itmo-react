@@ -3,7 +3,6 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from 'swiper';
 import 'swiper/css';
 import 'swiper/css/pagination';
-import { v4 as uuidv4 } from 'uuid';
 import {
   Section,
   Container,
@@ -57,9 +56,8 @@ const Publications = () => {
               <HideSwiperButton direction="prev" refProp={prevButtonRef} />
               <HideSwiperButton direction="next" refProp={nextButtonRef} />
               {data.map((publication) => {
-                const uid = uuidv4();
                 return (
-                  <SwiperSlide key={uid}>
+                  <SwiperSlide key={publication.uid}>
                     <Publication data={publication} />
                   </SwiperSlide>
                 );
@@ -71,8 +69,7 @@ const Publications = () => {
             {/* Tablet and mobile version without swiperjs */}
             <ScrollList>
               {data.map((publication) => {
-                const uid = uuidv4();
-                return <Publication data={publication} key={uid} />;
+                return <Publication data={publication} key={publication.uid} />;
               })}
             </ScrollList>
           </ScrollContainer>
