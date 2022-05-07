@@ -9,7 +9,7 @@ export const Container = styled.div`
   margin-bottom: 70px;
   box-shadow: 0px 4px 20px rgba(1, 54, 157, 0.15);
   border-radius: 10px;
-  background-color: #ffffff;
+  background-color: var(--color-white);
   position: relative;
   overflow: hidden;
 
@@ -74,19 +74,18 @@ export const Information = styled.div`
 `;
 
 export const Title = styled.h4`
-  font: 600 18px/30px OpenSans;
-  color: #000d26;
+  font: var(--header-18);
+  color: var(--color-dark-blue);
   margin: 0 0 4px;
 
   @media (max-width: 480px) {
-    font-size: 14px;
-    line-height: 19px;
+    font: var(--header-14);
   }
 `;
 
 export const Authors = styled.p`
-  font: italic 400 14px/19px OpenSans;
-  color: #009fac;
+  font: var(--accent-14);
+  color: var(--color-emerald);
   margin: 0 0 20px;
 
   @media (max-width: 1280px) {
@@ -94,15 +93,14 @@ export const Authors = styled.p`
   }
 
   @media (max-width: 480px) {
-    font-size: 12px;
-    line-height: 18px;
+    font: var(--accent-12);
     margin-bottom: 10px;
   }
 `;
 
 export const Limb = styled.p`
-  font: 400 14px/19px OpenSans;
-  color: #000d26;
+  font: var(--main-14);
+  color: var(--color-dark-blue);
   margin: 0;
 
   @media (max-width: 480px) {
@@ -111,7 +109,7 @@ export const Limb = styled.p`
 `;
 
 export const Links = styled.div`
-  background-color: #009fac;
+  background-color: var(--bg-color-emerald);
   width: 100%;
   height: 70px;
   border-radius: 0px 0px 10px 10px;
@@ -144,8 +142,8 @@ export const Links = styled.div`
 `;
 
 export const LinkText = styled.a`
-  font: 600 18px/30px OpenSans;
-  color: #ffffff;
+  font: var(--header-18);
+  color: var(--color-white);
   text-decoration: none;
   position: relative;
   padding-right: 8px;
@@ -153,8 +151,7 @@ export const LinkText = styled.a`
   cursor: pointer;
 
   @media (max-width: 480px) {
-    font-size: 14px;
-    line-height: 19px;
+    font: var(--header-14);
   }
 
   &::after {

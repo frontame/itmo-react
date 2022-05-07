@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Section = styled.section`
-  background-color: #e0f0ff;
+  background-color: var(--bg-color-light-blue);
   padding: 80px 0 370px;
 
   @media (max-width: 1280px) {
@@ -23,25 +23,20 @@ export const Container = styled.div`
 `;
 
 export const Title = styled.h2`
-  font-family: OpenSans;
-  font-size: 36px;
-  line-height: 68px;
-  font-weight: 600;
-  letter-spacing: 0.10000000149011612px;
+  font: var(--header-36);
+  letter-spacing: var(--letter-spacing-1);
+  color: var(--color-dark-blue);
   text-transform: uppercase;
   margin: 0 0 30px;
   text-align: center;
-  color: #000d26;
 
   @media (max-width: 1280px) {
-    font-size: 24px;
-    line-height: 33px;
+    font: var(--header-24);
     margin-bottom: 40px;
   }
 
   @media (max-width: 480px) {
-    font-size: 16px;
-    line-height: 22px;
+    font: var(--header-16);
     margin-bottom: 20px;
   }
 `;

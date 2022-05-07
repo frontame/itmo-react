@@ -12,7 +12,7 @@ const Button = styled.button`
   }};
   width: 60px;
   height: 60px;
-  background: #ffffff;
+  background: var(--color-white);
   background-image: url(${rightArrow});
   background-repeat: no-repeat;
   background-position: center;
