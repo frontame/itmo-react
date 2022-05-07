@@ -22,7 +22,7 @@ export const Container = styled.div`
   @media (max-width: 480px) {
     width: 288px;
     height: 462px;
-    margin-bottom: 0;
+    margin-bottom: 20px;
   }
 `;
 
@@ -59,13 +59,16 @@ export const Image = styled.img`
 export const Information = styled.div`
   padding: 20px 20px 30px;
   min-height: 305px;
+  box-sizing: border-box;
 
   @media (max-width: 1280px) {
     padding-bottom: 10px;
+    height: 277px;
     min-height: unset;
   }
 
   @media (max-width: 480px) {
+    height: 242px;
     padding: 12px 16px 16px;
   }
 `;
@@ -136,7 +139,7 @@ export const Links = styled.div`
 
   @media (max-width: 480px) {
     height: 44px;
-    padding: 12px 16px;
+    padding: 12px 16px 13px 16px;
   }
 `;
 
@@ -169,6 +172,10 @@ export const LinkText = styled.a`
 
     @media (max-width: 1280px) {
       right: -32px;
+    }
+
+    @media (max-width: 480px) {
+      top: -2px;
     }
   }
 
