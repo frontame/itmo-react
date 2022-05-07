@@ -1,4 +1,4 @@
-import { useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from 'swiper';
 import 'swiper/css';
@@ -13,6 +13,8 @@ import Publication from '../Publication';
 const Publications = () => {
   const { data } = store.publications;
 
+  const [slides, setSlides] = useState(3);
+
   const prevButtonRef = useRef(null);
   const nextButtonRef = useRef(null);
 
@@ -24,6 +26,13 @@ const Publications = () => {
     nextButtonRef.current.click();
   };
 
+  useEffect(() => {
+    const screenWidth = document.documentElement.clientWidth;
+
+    if (screenWidth < 1280) setSlides(2);
+    if (screenWidth < 660) setSlides(1);
+  }, []);
+
   return (
     <Section>
       <Container>
@@ -32,7 +41,7 @@ const Publications = () => {
         <SwiperButton direction="next" onClick={handleNextClick} />
         <Swiper
           spaceBetween={30}
-          slidesPerView={3}
+          slidesPerView={slides}
           pagination
           modules={[Pagination]}
         >

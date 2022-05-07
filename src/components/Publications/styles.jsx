@@ -6,7 +6,12 @@ export const Section = styled.section`
 
   @media (max-width: 1280px) {
     padding-top: 60px;
-    padding-bottom: 333px;
+    padding-bottom: 290px;
+  }
+
+  @media (max-width: 480px) {
+    padding-top: 40px;
+    padding-bottom: 245px;
   }
 `;
 
@@ -32,5 +37,11 @@ export const Title = styled.h2`
     font-size: 24px;
     line-height: 33px;
     margin-bottom: 40px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: 20px;
   }
 `;

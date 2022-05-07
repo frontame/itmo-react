@@ -16,7 +16,13 @@ export const Container = styled.div`
   @media (max-width: 1280px) {
     width: 330px;
     height: 515px;
-    margin-bottom: 40px;
+    margin-bottom: 42px;
+  }
+
+  @media (max-width: 480px) {
+    width: 288px;
+    height: 462px;
+    margin-bottom: 0;
   }
 `;
 
@@ -33,6 +39,12 @@ export const ImageContainer = styled.div`
   @media (max-width: 1280px) {
     width: 291px;
     height: 158px;
+  }
+
+  @media (max-width: 480px) {
+    width: 256px;
+    height: 160px;
+    padding: 16px 16px 0;
   }
 `;
 
@@ -52,20 +64,36 @@ export const Information = styled.div`
     padding-bottom: 10px;
     min-height: unset;
   }
+
+  @media (max-width: 480px) {
+    padding: 12px 16px 16px;
+  }
 `;
 
 export const Title = styled.h4`
   font: 600 18px/30px OpenSans;
   color: #000d26;
   margin: 0 0 4px;
+
+  @media (max-width: 480px) {
+    font-size: 14px;
+    line-height: 19px;
+  }
 `;
 
 export const Authors = styled.p`
   font: italic 400 14px/19px OpenSans;
   color: #009fac;
   margin: 0 0 20px;
+
   @media (max-width: 1280px) {
     margin-bottom: 12px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 12px;
+    line-height: 18px;
+    margin-bottom: 10px;
   }
 `;
 
@@ -73,6 +101,10 @@ export const Limb = styled.p`
   font: 400 14px/19px OpenSans;
   color: #000d26;
   margin: 0;
+
+  @media (max-width: 480px) {
+    font: var(--main-12);
+  }
 `;
 
 export const Links = styled.div`
@@ -95,11 +127,16 @@ export const Links = styled.div`
 
   @media (max-width: 1280px) {
     height: 60px;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
     position: static;
     left: unset;
     bottom: unset;
+  }
+
+  @media (max-width: 480px) {
+    height: 44px;
+    padding: 12px 16px;
   }
 `;
 
@@ -111,6 +148,11 @@ export const LinkText = styled.a`
   padding-right: 8px;
   box-sizing: border-box;
   cursor: pointer;
+
+  @media (max-width: 480px) {
+    font-size: 14px;
+    line-height: 19px;
+  }
 
   &::after {
     content: '';
@@ -124,6 +166,10 @@ export const LinkText = styled.a`
     width: 24px;
     height: 24px;
     transition: all 0.3s linear;
+
+    @media (max-width: 1280px) {
+      right: -32px;
+    }
   }
 
   &:hover::after {
