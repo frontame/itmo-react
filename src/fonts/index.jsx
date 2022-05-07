@@ -78,7 +78,7 @@ const OpenSansFonts = createGlobalStyle`
       url(${OpenSansRegularItalicWoff}) format('woff'),
       url(${OpenSansRegularItalicTtf}) format('truetype');
     font-weight: 400;
-    font-style: normal;
+    font-style: italic;
   }
 
   @font-face {
