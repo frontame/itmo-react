@@ -1,17 +1,7 @@
-import { useSwiper } from 'swiper/react';
 import Button from './styles';
 
-const SwiperButton = ({ direction }) => {
-  const swiper = useSwiper();
-
-  return (
-    <Button
-      direction={direction}
-      onClick={() => {
-        return direction === 'next' ? swiper.slideNext() : swiper.slidePrev();
-      }}
-    />
-  );
+const SwiperButton = ({ direction, onClick }) => {
+  return <Button direction={direction} onClick={onClick} />;
 };
 
 export default SwiperButton;

@@ -3,12 +3,12 @@ import rightArrow from '../../images/arrow-right.svg';
 
 const Button = styled.button`
   position: absolute;
-  top: 270px;
+  top: 359px;
   left: ${(props) => {
-    return props.direction === 'next' ? 'unset' : '0';
+    return props.direction === 'next' ? 'unset' : '-78px';
   }};
   right: ${(props) => {
-    return props.direction === 'next' ? '0' : 'unset';
+    return props.direction === 'next' ? '-78px' : 'unset';
   }};
   width: 60px;
   height: 60px;
