@@ -5,7 +5,11 @@ const Header = () => {
     <Container>
       <Nav>
         <Logo />
-        <Menu />
+        <Menu>
+          <span />
+          <span />
+          <span />
+        </Menu>
         <List>
           <li>
             <Link href="/">О нас</Link>
