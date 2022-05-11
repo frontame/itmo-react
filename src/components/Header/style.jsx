@@ -5,7 +5,6 @@ import logoMobile from '../../images/LogoMobile.png';
 
 export const Container = styled.header`
   background-color: var(--bg-color-dark-blue);
-  margin: 0 auto;
 `;
 
 export const Nav = styled.nav`
@@ -13,6 +12,7 @@ export const Nav = styled.nav`
   width: 100%;
   max-width: 1440px;
   padding-block: 20px;
+  margin: 0 auto;
 
   display: flex;
   align-items: center;
