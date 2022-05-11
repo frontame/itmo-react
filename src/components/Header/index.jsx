@@ -1,38 +1,41 @@
-import { Nav, Container, Menu, List, Link, Logo } from './style';
+import { useCallback, useState } from 'react';
+import { Logo, Container, Nav, NavBtn, NavList, NavLink } from './style';
+
+const linkList = [
+  'О нас',
+  'Лаборатория',
+  'Проекты',
+  'Образование',
+  'Публикации',
+  'Команда',
+  'Связаться',
+];
 
 const Header = () => {
+  const [toggle, setToggle] = useState(false);
+
+  const toggleMenu = useCallback(() => {
+    setToggle(!toggle);
+  }, [toggle]);
+
   return (
     <Container>
-      <Nav>
-        <Menu>
-          <span />
-          <span />
-          <span />
-        </Menu>
+      <Nav toggle={toggle}>
         <Logo />
-        <List>
-          <li>
-            <Link href="/">О нас</Link>
-          </li>
-          <li>
-            <Link href="/">Лаборатория</Link>
-          </li>
-          <li>
-            <Link href="/">Проекты</Link>
-          </li>
-          <li>
-            <Link href="/">Образование</Link>
-          </li>
-          <li>
-            <Link href="/">Публикации</Link>
-          </li>
-          <li>
-            <Link href="/">Команда</Link>
-          </li>
-          <li>
-            <Link href="/">Связаться</Link>
-          </li>
-        </List>
+        <NavBtn toggle={toggle} onClick={toggleMenu}>
+          <span />
+          <span />
+          <span />
+        </NavBtn>
+        <NavList toggle={toggle}>
+          {linkList.map((item) => {
+            return (
+              <li key={item}>
+                <NavLink href="#">{item}</NavLink>
+              </li>
+            );
+          })}
+        </NavList>
       </Nav>
     </Container>
   );

@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import logoDesktop from '../../images/LogoDesktop.png';
 import logoTablet from '../../images/LogoTablet.png';
 import logoMobile from '../../images/LogoMobile.png';
@@ -12,7 +12,7 @@ export const Nav = styled.nav`
   box-sizing: border-box;
   width: 100%;
   max-width: 1440px;
-  padding-block: 16px 20px;
+  padding-block: 20px;
 
   display: flex;
   align-items: center;
@@ -21,12 +21,21 @@ export const Nav = styled.nav`
   position: relative;
 
   @media (max-width: 1000px) {
-    justify-content: space-between;
+    justify-content: flex-start;
+
+    ${(props) => {
+      return (
+        props.toggle &&
+        css`
+          align-items: flex-end;
+          flex-direction: column;
+        `
+      );
+    }}
   }
 `;
 
-export const Menu = styled.div`
-  box-sizing: border-box;
+export const NavBtn = styled.div`
   height: 20px;
   width: 20px;
 
@@ -36,12 +45,10 @@ export const Menu = styled.div`
   flex-direction: column;
   gap: 5px;
 
+  position: relative;
+
   span {
-    margin: 0;
-    padding: 0;
-
-    background-color: white;
-
+    background-color: var(--color-white);
     height: 2px;
     width: 100%;
   }
@@ -52,15 +59,36 @@ export const Menu = styled.div`
 
   @media (max-width: 1000px) {
     display: flex;
-    margin-left: 30px;
+    margin-inline: 40px;
+
+    ${(props) => {
+      return (
+        props.toggle &&
+        css`
+          span:first-child {
+            transform: rotate(45deg);
+            position: absolute;
+          }
+
+          span {
+            transform: rotate(-45deg);
+          }
+
+          span:last-child {
+            display: none;
+          }
+        `
+      );
+    }}
   }
 
   @media (max-width: 500px) {
-    margin-left: 16px;
+    margin-inline: 16px;
   }
 `;
 
-export const List = styled.ul`
+export const NavList = styled.ul`
+  background-color: var(--bg-color-dark-blue);
   margin: 0;
   padding: 0;
   list-style-type: none;
@@ -68,9 +96,10 @@ export const List = styled.ul`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1rem;
+  gap: 20px;
 
   li {
+    box-sizing: border-box;
     width: 100px;
     height: 42px;
 
@@ -80,6 +109,7 @@ export const List = styled.ul`
     display: flex;
     align-items: center;
     justify-content: center;
+
     border-bottom: 2px solid transparent;
 
     &:hover {
@@ -90,10 +120,38 @@ export const List = styled.ul`
 
   @media (max-width: 1000px) {
     display: none;
+    width: 100%;
+    gap: 0px;
+
+    ${(props) => {
+      return (
+        props.toggle &&
+        css`
+          display: flex;
+          flex-direction: column;
+
+          position: absolute;
+          top: 100%;
+          left: 50%;
+          transform: translateX(-50%);
+
+          li {
+            width: 100%;
+            justify-content: flex-start;
+            padding-left: 40px;
+          }
+        `
+      );
+    }}
+  }
+  @media (max-width: 500px) {
+    li {
+      padding-left: 16px;
+    }
   }
 `;
 
-export const Link = styled.a`
+export const NavLink = styled.a`
   margin: 0;
   padding: 0;
   text-decoration: none;
