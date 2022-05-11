@@ -4,12 +4,12 @@ const Header = () => {
   return (
     <Container>
       <Nav>
-        <Logo />
         <Menu>
           <span />
           <span />
           <span />
         </Menu>
+        <Logo />
         <List>
           <li>
             <Link href="/">О нас</Link>

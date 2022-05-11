@@ -1,4 +1,7 @@
 import styled from 'styled-components';
+import logoDesktop from '../../images/LogoDesktop.png';
+import logoTablet from '../../images/LogoTablet.png';
+import logoMobile from '../../images/LogoMobile.png';
 
 export const Container = styled.header`
   background-color: var(--bg-color-dark-blue);
@@ -14,14 +17,22 @@ export const Nav = styled.nav`
   display: flex;
   align-items: center;
   justify-content: space-around;
+
+  position: relative;
+
+  @media (max-width: 1000px) {
+    justify-content: space-between;
+  }
 `;
 
 export const Menu = styled.div`
   box-sizing: border-box;
-  height: 24px;
-  width: 24px;
+  height: 20px;
+  width: 20px;
 
   display: none;
+  align-items: center;
+  justify-content: center;
   flex-direction: column;
   gap: 5px;
 
@@ -31,12 +42,21 @@ export const Menu = styled.div`
 
     background-color: white;
 
-    height: 3px;
+    height: 2px;
     width: 100%;
   }
 
   &:hover {
     cursor: pointer;
+  }
+
+  @media (max-width: 1000px) {
+    display: flex;
+    margin-left: 30px;
+  }
+
+  @media (max-width: 500px) {
+    margin-left: 16px;
   }
 `;
 
@@ -67,20 +87,41 @@ export const List = styled.ul`
       border-bottom: 2px solid var(--color-emerald);
     }
   }
+
+  @media (max-width: 1000px) {
+    display: none;
+  }
 `;
 
 export const Link = styled.a`
   margin: 0;
   padding: 0;
   text-decoration: none;
-
   font: var(--main-14-19);
-
   color: var(--color-white);
 `;
 
 export const Logo = styled.div`
-  min-width: 150px;
-  height: 30px;
-  background-color: black;
+  width: 150px;
+  height: 54px;
+  background-image: url(${logoDesktop});
+  background-position: center;
+  background-repeat: no-repeat;
+
+  @media (max-width: 1000px) {
+    width: 95px;
+    height: 32px;
+    background-image: url(${logoTablet});
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  @media (max-width: 500px) {
+    width: 71px;
+    height: 24px;
+    background-image: url(${logoMobile});
+  }
 `;
