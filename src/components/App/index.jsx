@@ -1,9 +1,8 @@
-// import { observer } from 'mobx-react';
+import { observer } from 'mobx-react';
 import Publications from '../Publications';
 
 const App = () => {
   return <Publications />;
 };
 
-// export default observer(App);
-export default App;
+export default observer(App);
