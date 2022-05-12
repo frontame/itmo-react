@@ -4,8 +4,12 @@ import Industrial from '../Industrial';
 // import store from '../../store/store'
 
 const App = () => {
-  return <Header />;
-  return <Industrial />;
+  return (
+    <>
+      <Header />
+      <Industrial />
+    </>
+  );
 };
 
 export default observer(App);
