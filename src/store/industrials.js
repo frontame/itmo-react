@@ -1,4 +1,5 @@
-import { action, makeObservable, observable } from 'mobx';
+import { action, makeObservable, observable, runInAction } from 'mobx';
+import industrialData from '../data/industrialData';
 
 class Industrials {
   data = [];
@@ -8,10 +9,12 @@ class Industrials {
       data: observable,
       getIndustrials: action,
     });
+
+    runInAction(this.getIndustrials);
   }
 
   getIndustrials = () => {
-    this.data = null; // временно (чтобы не было ошибки ESLint)
+    this.data = industrialData;
   };
 }
 

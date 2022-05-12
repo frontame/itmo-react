@@ -1,4 +1,5 @@
 import { action, makeObservable, observable } from 'mobx';
+import industrialData from '../data/industrialData';
 
 class Publications {
   data = [];
@@ -11,7 +12,7 @@ class Publications {
   }
 
   getPublications = () => {
-    this.data = null; // временно (чтобы не было ошибки ESLint)
+    this.data = industrialData;
   };
 }
 
