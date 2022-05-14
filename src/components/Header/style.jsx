@@ -4,7 +4,10 @@ import logoTablet from '../../images/LogoTablet.png';
 import logoMobile from '../../images/LogoMobile.png';
 
 export const Container = styled.header`
-  background-color: var(--bg-color-dark-blue);
+  /* background-color: var(--bg-color-dark-blue); */
+  background-color: ${(props) => {
+    return props.theme.bgColorPrimaryDark;
+  }};
 `;
 
 export const Nav = styled.nav`
