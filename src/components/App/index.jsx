@@ -1,8 +1,9 @@
 import { observer } from 'mobx-react';
+import Footer from '../Footer';
 // import store from '../../store/store'
 
-const App = ({ kek }) => {
-  return <div className="kek">{kek}Hello</div>;
+const App = () => {
+  return <Footer />;
 };
 
 export default observer(App);
