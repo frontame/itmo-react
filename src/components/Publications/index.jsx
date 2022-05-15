@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from 'swiper';
 import 'swiper/css';
@@ -23,13 +23,13 @@ const Publications = () => {
   const prevButtonRef = useRef(null);
   const nextButtonRef = useRef(null);
 
-  const handlePrevClick = () => {
+  const handlePrevClick = useCallback(() => {
     prevButtonRef.current.click();
-  };
+  }, [prevButtonRef]);
 
-  const handleNextClick = () => {
+  const handleNextClick = useCallback(() => {
     nextButtonRef.current.click();
-  };
+  }, [nextButtonRef]);
 
   useEffect(() => {
     const screenWidth = document.documentElement.clientWidth;

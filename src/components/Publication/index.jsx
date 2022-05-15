@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, memo } from 'react';
 import {
   Container,
   ImageContainer,
@@ -14,6 +14,7 @@ import {
 
 const Publication = ({ data }) => {
   const { image, title, authors, limb } = data;
+
   const [state, setState] = useState({
     linksVisibility: false,
     imageHeight: '223px',
@@ -56,4 +57,4 @@ const Publication = ({ data }) => {
   );
 };
 
-export default Publication;
+export default memo(Publication);

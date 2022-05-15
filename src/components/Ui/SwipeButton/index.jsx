@@ -1,3 +1,5 @@
+import { memo } from 'react';
+
 import ArrowButton from './styles';
 
 const SwipeButton = (props) => {
@@ -8,4 +10,4 @@ const SwipeButton = (props) => {
   );
 };
 
-export default SwipeButton;
+export default memo(SwipeButton);
