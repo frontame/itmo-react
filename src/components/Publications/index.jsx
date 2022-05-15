@@ -11,7 +11,7 @@ import {
   ScrollList,
 } from './styles';
 import store from '../../store/store';
-import SwiperButton from '../SwiperButton';
+import SwipeButton from '../Ui/SwipeButton';
 import HideSwiperButton from '../HideSwiperButton';
 import Publication from '../Publication';
 
@@ -45,8 +45,8 @@ const Publications = () => {
         {swiperEnabled > 0 ? (
           <>
             {/* Desktop version with swiperjs */}
-            <SwiperButton direction="prev" onClick={handlePrevClick} />
-            <SwiperButton direction="next" onClick={handleNextClick} />
+            <SwipeButton direction="prev" onClick={handlePrevClick} />
+            <SwipeButton direction="next" onClick={handleNextClick} />
             <Swiper
               spaceBetween={30}
               slidesPerView={3}

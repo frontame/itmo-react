@@ -1,7 +1,7 @@
 import styled from 'styled-components';
-import rightArrow from '../../images/arrow-right.svg';
+import rightArrow from '../../../images/arrow-right.svg';
 
-const Button = styled.button`
+const ArrowButton = styled.button`
   position: absolute;
   top: 359px;
   left: ${(props) => {
@@ -12,7 +12,9 @@ const Button = styled.button`
   }};
   width: 60px;
   height: 60px;
-  background: var(--color-white);
+  background: ${(props) => {
+    return props.theme.thirdColor;
+  }};
   background-image: url(${rightArrow});
   background-repeat: no-repeat;
   background-position: center;
@@ -29,4 +31,4 @@ const Button = styled.button`
   }
 `;
 
-export default Button;
+export default ArrowButton;
