@@ -15,6 +15,9 @@ import {
 const Publication = ({ data }) => {
   const { image, title, authors, limb } = data;
 
+  const WIDE_IMAGE = '223px';
+  const TINY_IMAGE = '158px';
+
   const [state, setState] = useState({
     linksVisibility: false,
     imageHeight: '223px',
@@ -22,13 +25,13 @@ const Publication = ({ data }) => {
 
   const handleMouseEnter = () => {
     setState((prevState) => {
-      return { ...prevState, linksVisibility: true, imageHeight: '158px' };
+      return { ...prevState, linksVisibility: true, imageHeight: TINY_IMAGE };
     });
   };
 
   const handleMouseLeave = () => {
     setState((prevState) => {
-      return { ...prevState, linksVisibility: false, imageHeight: '223px' };
+      return { ...prevState, linksVisibility: false, imageHeight: WIDE_IMAGE };
     });
   };
 
