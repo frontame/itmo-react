@@ -132,7 +132,7 @@ export const Links = styled.div`
   position: absolute;
   left: 0;
   bottom: ${(props) => {
-    return props.visible ? '0' : '-70';
+    return props.visible ? '0' : '-70px';
   }};
   transition: all 0.3s ease-in-out;
 
