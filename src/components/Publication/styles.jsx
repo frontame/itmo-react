@@ -193,18 +193,20 @@ export const LinkText = styled.a`
     background-position: center;
     width: 24px;
     height: 24px;
-    transition: all 0.3s linear;
-
-    @media (max-width: 1280px) {
-      right: -32px;
-    }
+    transition: all 0.2s linear;
 
     @media (max-width: 480px) {
       top: -2px;
     }
   }
 
-  &:hover::after {
+  &:hover,
+  &:active {
+    text-decoration: underline;
+  }
+
+  &:hover::after,
+  &:active::after {
     right: -32px;
   }
 `;
