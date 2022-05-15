@@ -81,6 +81,11 @@ export const Title = styled.h4`
     return props.theme.primaryColorDark;
   }};
   margin: 0 0 4px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
 
   @media (max-width: 480px) {
     font: var(--header-14);
@@ -93,6 +98,11 @@ export const Authors = styled.p`
     return props.theme.secondaryColor;
   }};
   margin: 0 0 20px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
 
   @media (max-width: 1280px) {
     margin-bottom: 12px;
@@ -110,9 +120,15 @@ export const Limb = styled.p`
     return props.theme.primaryColorDark;
   }};
   margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 7;
+  -webkit-box-orient: vertical;
 
   @media (max-width: 480px) {
     font: var(--main-12);
+    -webkit-line-clamp: 8;
   }
 `;
 
