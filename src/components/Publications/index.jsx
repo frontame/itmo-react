@@ -45,8 +45,16 @@ const Publications = () => {
         {swiperEnabled > 0 ? (
           <>
             {/* Desktop version with swiperjs */}
-            <SwipeButton direction="prev" onClick={handlePrevClick} />
-            <SwipeButton direction="next" onClick={handleNextClick} />
+            <SwipeButton
+              design="light"
+              direction="prev"
+              onClick={handlePrevClick}
+            />
+            <SwipeButton
+              design="light"
+              direction="next"
+              onClick={handleNextClick}
+            />
             <Swiper
               spaceBetween={30}
               slidesPerView={3}
