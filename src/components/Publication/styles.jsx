@@ -9,7 +9,9 @@ export const Container = styled.div`
   margin-bottom: 70px;
   box-shadow: 0px 4px 20px rgba(1, 54, 157, 0.15);
   border-radius: 10px;
-  background-color: var(--color-white);
+  background-color: ${(props) => {
+    return props.theme.thirdColor;
+  }};
   position: relative;
   overflow: hidden;
 
@@ -75,7 +77,9 @@ export const Information = styled.div`
 
 export const Title = styled.h4`
   font: var(--header-18);
-  color: var(--color-dark-blue);
+  color: ${(props) => {
+    return props.theme.primaryColorDark;
+  }};
   margin: 0 0 4px;
 
   @media (max-width: 480px) {
@@ -85,7 +89,9 @@ export const Title = styled.h4`
 
 export const Authors = styled.p`
   font: var(--accent-14);
-  color: var(--color-emerald);
+  color: ${(props) => {
+    return props.theme.secondaryColor;
+  }};
   margin: 0 0 20px;
 
   @media (max-width: 1280px) {
@@ -100,7 +106,9 @@ export const Authors = styled.p`
 
 export const Limb = styled.p`
   font: var(--main-14);
-  color: var(--color-dark-blue);
+  color: ${(props) => {
+    return props.theme.primaryColorDark;
+  }};
   margin: 0;
 
   @media (max-width: 480px) {
@@ -109,7 +117,9 @@ export const Limb = styled.p`
 `;
 
 export const Links = styled.div`
-  background-color: var(--bg-color-emerald);
+  background-color: ${(props) => {
+    return props.theme.bgColorSecondary;
+  }};
   width: 100%;
   height: 70px;
   border-radius: 0px 0px 10px 10px;
@@ -143,7 +153,9 @@ export const Links = styled.div`
 
 export const LinkText = styled.a`
   font: var(--header-18);
-  color: var(--color-white);
+  color: ${(props) => {
+    return props.theme.thirdColor;
+  }};
   text-decoration: none;
   position: relative;
   padding-right: 8px;

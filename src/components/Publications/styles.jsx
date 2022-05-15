@@ -1,7 +1,9 @@
 import styled from 'styled-components';
 
 export const Section = styled.section`
-  background-color: var(--bg-color-light-blue);
+  background-color: ${(props) => {
+    return props.theme.bgColorSecondaryLight;
+  }};
   padding: 80px 0 370px;
 
   @media (max-width: 1280px) {
@@ -25,7 +27,9 @@ export const Container = styled.div`
 export const Title = styled.h2`
   font: var(--header-36);
   letter-spacing: var(--letter-spacing-1);
-  color: var(--color-dark-blue);
+  color: ${(props) => {
+    return props.theme.primaryColorDark;
+  }};
   text-transform: uppercase;
   margin: 0 0 30px;
   text-align: center;
