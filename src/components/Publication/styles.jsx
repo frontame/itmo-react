@@ -3,6 +3,59 @@ import styled from 'styled-components';
 import rightArrow from '../../images/publication-arrow-right.svg';
 import shareIcon from '../../images/publication-share-button.svg';
 
+export const ImageContainer = styled.div`
+  padding: 20px 20px 0;
+  width: 310px;
+  height: 223px;
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
+
+  @media (max-width: 1280px) {
+    width: 291px;
+    height: 158px;
+  }
+
+  @media (max-width: 480px) {
+    width: 256px;
+    height: 160px;
+    padding: 16px 16px 0;
+  }
+`;
+
+export const Links = styled.div`
+  background-color: ${(props) => {
+    return props.theme.bgColorSecondary;
+  }};
+  width: 100%;
+  height: 70px;
+  border-radius: 0px 0px 10px 10px;
+  padding: 0 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  bottom: -70px;
+  transition: all 0.3s ease-in-out;
+
+  @media (max-width: 1280px) {
+    height: 60px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    position: static;
+    left: unset;
+    bottom: unset;
+  }
+
+  @media (max-width: 480px) {
+    height: 44px;
+    padding: 12px 16px 13px 16px;
+  }
+`;
+
 export const Container = styled.div`
   width: 348px;
   height: 548px;
@@ -26,27 +79,13 @@ export const Container = styled.div`
     height: 462px;
     margin-bottom: 20px;
   }
-`;
 
-export const ImageContainer = styled.div`
-  padding: 20px 20px 0;
-  width: 310px;
-  height: ${(props) => {
-    return props.height;
-  }};
-  border-radius: 10px;
-  transition: all 0.3s ease-in-out;
-  overflow: hidden;
-
-  @media (max-width: 1280px) {
-    width: 291px;
+  &:hover ${ImageContainer} {
     height: 158px;
   }
 
-  @media (max-width: 480px) {
-    width: 256px;
-    height: 160px;
-    padding: 16px 16px 0;
+  &:hover ${Links} {
+    bottom: 0;
   }
 `;
 
@@ -129,41 +168,6 @@ export const Limb = styled.p`
   @media (max-width: 480px) {
     font: var(--main-12);
     -webkit-line-clamp: 8;
-  }
-`;
-
-export const Links = styled.div`
-  background-color: ${(props) => {
-    return props.theme.bgColorSecondary;
-  }};
-  width: 100%;
-  height: 70px;
-  border-radius: 0px 0px 10px 10px;
-  padding: 0 20px;
-  box-sizing: border-box;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-between;
-  align-items: center;
-  position: absolute;
-  left: 0;
-  bottom: ${(props) => {
-    return props.visible ? '0' : '-70px';
-  }};
-  transition: all 0.3s ease-in-out;
-
-  @media (max-width: 1280px) {
-    height: 60px;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    position: static;
-    left: unset;
-    bottom: unset;
-  }
-
-  @media (max-width: 480px) {
-    height: 44px;
-    padding: 12px 16px 13px 16px;
   }
 `;
 
