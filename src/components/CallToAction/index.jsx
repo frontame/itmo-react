@@ -7,12 +7,22 @@ const CallToAction = () => {
   const {
     register,
     handleSubmit,
-    // watch,
-    // formState: { errors },
-  } = useForm();
+    reset,
+    formState: { errors },
+  } = useForm({
+    mode: 'onBlur',
+    defaultValues: {
+      name: '',
+      surname: '',
+      phone: '',
+      email: '',
+      message: '',
+    },
+  });
 
   const onSubmit = (data) => {
     alert(JSON.stringify(data));
+    reset();
   };
 
   return (
@@ -26,12 +36,58 @@ const CallToAction = () => {
         </TextContainer>
         <form onSubmit={handleSubmit(onSubmit)}>
           <fieldset>
-            <input placeholder="Имя" {...register('name')} />
-            <input placeholder="Фамилия" {...register('surname')} />
-            <input placeholder="Телефон" {...register('phone')} />
-            <input placeholder="E-mail" {...register('email')} />
+            <input
+              type="text"
+              placeholder="Имя*"
+              {...register('name', {
+                required: 'Поле обязательно для заполнения',
+                minLength: {
+                  value: 3,
+                  message: 'Минимум 3 символа',
+                },
+              })}
+              style={
+                errors?.name && { background: '#FFAAAA', color: '#000000' }
+              }
+              title={errors?.name?.message || 'Ошибка заполнения поля'}
+            />
+            <input
+              type="text"
+              placeholder="Фамилия"
+              {...register('surname', {
+                minLength: {
+                  value: 3,
+                  message: 'Минимум 3 символа',
+                },
+              })}
+              style={
+                errors?.surname && { background: '#FFAAAA', color: '#000000' }
+              }
+              title={errors?.surname?.message || 'Ошибка заполнения поля'}
+            />
+            <input type="tel" placeholder="Телефон" {...register('phone')} />
+            <input
+              type="email"
+              placeholder="E-mail*"
+              {...register('email', {
+                required: 'Поле обязательно для заполнения',
+              })}
+              style={
+                errors?.email && { background: '#FFAAAA', color: '#000000' }
+              }
+              title={errors?.email?.message || 'Ошибка заполнения поля'}
+            />
           </fieldset>
-          <textarea placeholder="Сообщение" {...register('message')} />
+          <textarea
+            placeholder="Сообщение*"
+            {...register('message', {
+              required: 'Поле обязательно для заполнения',
+            })}
+            style={
+              errors?.message && { background: '#FFAAAA', color: '#000000' }
+            }
+            title={errors?.message?.message || 'Ошибка заполнения поля'}
+          />
           <button type="submit">Отправить</button>
         </form>
       </Container>
