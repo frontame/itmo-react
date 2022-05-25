@@ -13,11 +13,26 @@ export const Container = styled.div`
   box-sizing: border-box;
   padding: 80px 0 35px;
 
+  @media (max-width: 1200px) {
+    width: 690px;
+    padding-top: 60px;
+  }
+
+  @media (max-width: 767px) {
+    width: 320px;
+    padding: 40px 15px;
+  }
+
   form {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 29px;
+
+    @media (max-width: 767px) {
+      flex-direction: column;
+      gap: 12px;
+    }
   }
 
   fieldset {
@@ -30,12 +45,21 @@ export const Container = styled.div`
     margin: 0;
     border: none;
     row-gap: 20px;
+
+    @media (max-width: 1200px) {
+      max-width: 449px;
+    }
+
+    @media (max-width: 767px) {
+      flex-direction: column;
+      gap: 12px;
+    }
   }
 
   input {
     width: 352px;
-    padding: 19px 23px 19px 20px;
     height: 60px;
+    padding: 19px 23px 19px 20px;
     box-sizing: border-box;
     border-radius: 10px;
     border: none;
@@ -48,6 +72,20 @@ export const Container = styled.div`
 
     &::placeholder {
       opacity: 1;
+    }
+
+    @media (max-width: 1200px) {
+      font-size: 14px;
+      width: 210px;
+      height: 44px;
+      padding: 12px;
+    }
+
+    @media (max-width: 767px) {
+      width: 288px;
+      border-radius: 5px;
+      font: var(--main-12);
+      padding: 10px;
     }
   }
 
@@ -69,13 +107,26 @@ export const Container = styled.div`
     &::placeholder {
       opacity: 1;
     }
+
+    @media (max-width: 1200px) {
+      width: 210px;
+      height: 108px;
+      font-size: 14px;
+      padding: 12px;
+    }
+
+    @media (max-width: 767px) {
+      width: 288px;
+      border-radius: 5px;
+      font: var(--main-12);
+      padding: 10px;
+    }
   }
 
   button {
     margin-top: 8px;
     width: 350px;
     height: 60px;
-    /* border: 1px solid #ffffff; */
     border: ${(props) => {
       return `1px solid${props.theme.thirdColor}`;
     }};
@@ -97,6 +148,16 @@ export const Container = styled.div`
         return props.theme.secondaryColorLight;
       }};
     }
+
+    @media (max-width: 1200px) {
+      width: 210px;
+      height: 44px;
+    }
+
+    @media (max-width: 767px) {
+      width: 288px;
+      font: var(--header-14);
+    }
   }
 `;
 
@@ -109,6 +170,15 @@ export const Title = styled.h2`
   text-transform: uppercase;
   text-align: center;
   margin: 0 0 37px;
+
+  @media (max-width: 1200px) {
+    font: var(--header-24);
+  }
+
+  @media (max-width: 767px) {
+    font: var(--header-16);
+    margin-bottom: 23px;
+  }
 `;
 
 export const TextContainer = styled.p`
@@ -119,4 +189,14 @@ export const TextContainer = styled.p`
   color: ${(props) => {
     return props.theme.thirdColor;
   }};
+
+  @media (max-width: 1200px) {
+    font: var(--main-14-20);
+    margin-bottom: 37px;
+  }
+
+  @media (max-width: 767px) {
+    font: var(--main-12);
+    margin-bottom: 23px;
+  }
 `;
