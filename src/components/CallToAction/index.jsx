@@ -32,7 +32,7 @@ const CallToAction = () => {
             <input placeholder="E-mail" {...register('email')} />
           </fieldset>
           <textarea placeholder="Сообщение" {...register('message')} />
-          <input type="submit" />
+          <button type="submit">Отправить</button>
         </form>
       </Container>
     </Section>

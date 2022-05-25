@@ -34,7 +34,7 @@ export const Container = styled.div`
 
   input {
     width: 352px;
-    padding: 19px 24px 19px 20px;
+    padding: 19px 23px 19px 20px;
     height: 60px;
     box-sizing: border-box;
     border-radius: 10px;
@@ -70,10 +70,39 @@ export const Container = styled.div`
       opacity: 1;
     }
   }
+
+  button {
+    margin-top: 8px;
+    width: 350px;
+    height: 60px;
+    /* border: 1px solid #ffffff; */
+    border: ${(props) => {
+      return `1px solid${props.theme.thirdColor}`;
+    }};
+    border-radius: 10px;
+    font: var(--header-18);
+    text-transform: uppercase;
+    color: ${(props) => {
+      return props.theme.thirdColor;
+    }};
+    background-color: transparent;
+    transition: all 0.3s linear;
+
+    &:hover {
+      cursor: pointer;
+      border: ${(props) => {
+        return `1px solid${props.theme.secondaryColorLight}`;
+      }};
+      color: ${(props) => {
+        return props.theme.secondaryColorLight;
+      }};
+    }
+  }
 `;
 
 export const Title = styled.h2`
   font: var(--header-36);
+  letter-spacing: var(--letter-spacing-1);
   color: ${(props) => {
     return props.theme.thirdColor;
   }};
@@ -86,6 +115,7 @@ export const TextContainer = styled.p`
   max-width: 919px;
   margin: 0 auto 60px;
   font: var(--main-18);
+  letter-spacing: var(--letter-spacing-1);
   color: ${(props) => {
     return props.theme.thirdColor;
   }};
