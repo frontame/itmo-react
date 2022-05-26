@@ -64,7 +64,7 @@ export const NoteContaner = styled.div`
   padding: 0;
 `;
 
-export const NoteShare = styled.p`
+export const NoteShare = styled(Note)`
   font: var(--main-18-26-light);
 `;
 

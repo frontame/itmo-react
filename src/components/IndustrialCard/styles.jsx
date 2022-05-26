@@ -76,6 +76,7 @@ export const CardTitle = styled.h3`
   padding: 0;
   font: var(--header-18);
   z-index: 2;
+  min-height: 60px;
 `;
 
 export const CardIcon = styled.img`
