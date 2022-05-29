@@ -14,6 +14,12 @@ export const CardButton = styled.button`
   background-color: transparent;
   font: var(--main-14-19);
   z-index: 2;
+  @media screen and (max-width: 1230px) {
+    padding: 9px 0;
+    border-radius: 5px;
+    font: var(--header-10);
+    letter-spacing: var(--letter-spacing-06);
+  }
 `;
 
 export const IndustrialCard = styled.article`
@@ -68,6 +74,42 @@ export const IndustrialCard = styled.article`
       return `url(${props.background})`;
     }};
   }
+  @media screen and (max-width: 1230px) {
+    max-width: 150px;
+    padding: 12px;
+    box-shadow: 0px 2.35349px 11.7674px rgba(1, 54, 157, 0.15);
+    border-radius: 5.88372px;
+    gap: 20px;
+    &:hover {
+      transform: translateY(-10pt);
+    }
+    &:active {
+      transform: translateY(-10pt);
+    }
+    &:hover ${CardButton} {
+      border-color: transparent;
+      background: var(--color-white);
+      color: var(--color-emerald);
+    }
+    &:active ${CardButton} {
+      border-color: transparent;
+      background: var(--color-white);
+      color: var(--color-emerald);
+    }
+  }
+  @media screen and (max-width: 710px) {
+    max-width: 140px;
+    padding: 10px;
+    box-shadow: none;
+    border-radius: 5.45566px;
+    gap: 16px;
+    &:hover {
+      transform: translateY(0);
+    }
+    &:active {
+      transform: translateY(0);
+    }
+  }
 `;
 
 export const CardTitle = styled.h3`
@@ -76,6 +118,13 @@ export const CardTitle = styled.h3`
   padding: 0;
   font: var(--header-18);
   z-index: 2;
+  min-height: 60px;
+  @media screen and (max-width: 1230px) {
+    font: var(--header-12);
+  }
+  @media screen and (max-width: 710px) {
+    font: var(--header-10);
+  }
 `;
 
 export const CardIcon = styled.img`
@@ -87,6 +136,26 @@ export const CardIcon = styled.img`
   box-shadow: 0px 4px 20px rgba(1, 54, 157, 0.15);
   border-radius: 36px;
   z-index: 2;
+  @media screen and (max-width: 1230px) {
+    width: 20px;
+    height: 20px;
+    padding: 11px;
+  }
+  @media screen and (max-width: 710px) {
+    width: 20px;
+    height: 20px;
+    padding: 11px;
+    &:hover ${CardButton} {
+      border-color: transparent;
+      background: var(--color-white);
+      color: var(--color-emerald);
+    }
+    &:active ${CardButton} {
+      border-color: transparent;
+      background: var(--color-white);
+      color: var(--color-emerald);
+    }
+  }
 `;
 
 export const CardText = styled.p`
@@ -96,4 +165,8 @@ export const CardText = styled.p`
   margin: 0 auto;
   padding: 0;
   z-index: 2;
+  @media screen and (max-width: 1230px) {
+    font: var(--main-10);
+    letter-spacing: var(--letter-spacing-1);
+  }
 `;
