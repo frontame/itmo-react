@@ -15,7 +15,7 @@ export const CardButton = styled.button`
   font: var(--main-14-19);
   z-index: 2;
   @media screen and (max-width: 1230px) {
-    padding: 9px 0;
+    padding: 8px 0;
     border-radius: 5px;
     font: var(--header-10);
     letter-spacing: var(--letter-spacing-06);
@@ -121,9 +121,11 @@ export const CardTitle = styled.h3`
   min-height: 60px;
   @media screen and (max-width: 1230px) {
     font: var(--header-12);
+    min-height: 30px;
   }
   @media screen and (max-width: 710px) {
     font: var(--header-10);
+    min-height: 28px;
   }
 `;
 
