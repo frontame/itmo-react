@@ -21,6 +21,7 @@ export const Nav = styled.nav`
   justify-content: space-around;
 
   position: relative;
+  z-index: 10;
 
   @media (max-width: 1000px) {
     justify-content: flex-start;
@@ -108,7 +109,7 @@ export const NavList = styled.ul`
   li {
     box-sizing: border-box;
     width: 100px;
-    height: 42px;
+    height: 44px;
 
     margin: 0;
     padding: 0;
