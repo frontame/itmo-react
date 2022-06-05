@@ -122,6 +122,11 @@ export const NavList = styled.ul`
     &:hover {
       cursor: pointer;
       border-bottom: 2px solid var(--color-emerald);
+
+      a {
+        font: var(--header-14-24);
+        letter-spacing: var(--letter-spacing-1);
+      }
     }
   }
 
@@ -150,7 +155,14 @@ export const NavList = styled.ul`
         `
       );
     }}
+
+    &:hover {
+      a {
+        font: var(--header-14);
+      }
+    }
   }
+
   @media (max-width: 500px) {
     li {
       padding-left: 16px;
