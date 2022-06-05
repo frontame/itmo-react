@@ -4,7 +4,6 @@ import logoTablet from '../../images/LogoTablet.png';
 import logoMobile from '../../images/LogoMobile.png';
 
 export const Container = styled.header`
-  /* background-color: var(--bg-color-dark-blue); */
   background-color: ${(props) => {
     return props.theme.bgColorPrimaryDark;
   }};
@@ -14,7 +13,7 @@ export const Nav = styled.nav`
   box-sizing: border-box;
   width: 100%;
   max-width: 1440px;
-  padding-block: 20px;
+  padding-block: 13px;
   margin: 0 auto;
 
   display: flex;
@@ -25,6 +24,7 @@ export const Nav = styled.nav`
 
   @media (max-width: 1000px) {
     justify-content: flex-start;
+    min-height: 60px;
 
     ${(props) => {
       return (
@@ -35,6 +35,10 @@ export const Nav = styled.nav`
         `
       );
     }}
+  }
+
+  @media (max-width: 400px) {
+    min-height: 45px;
   }
 `;
 
