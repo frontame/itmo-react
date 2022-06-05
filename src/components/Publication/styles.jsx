@@ -11,7 +11,7 @@ export const ImageContainer = styled.div`
   transition: all 0.3s ease-in-out;
   overflow: hidden;
 
-  @media (max-width: 1280px) {
+  @media (max-width: 1230px) {
     width: 291px;
     height: 158px;
   }
@@ -41,7 +41,7 @@ export const Links = styled.div`
   bottom: -70px;
   transition: all 0.3s ease-in-out;
 
-  @media (max-width: 1280px) {
+  @media (max-width: 1230px) {
     height: 60px;
     padding-top: 15px;
     padding-bottom: 15px;
@@ -68,24 +68,32 @@ export const Container = styled.div`
   position: relative;
   overflow: hidden;
 
-  @media (max-width: 1280px) {
-    width: 330px;
-    height: 515px;
-    margin-bottom: 42px;
-  }
-
-  @media (max-width: 480px) {
-    width: 288px;
-    height: 462px;
-    margin-bottom: 20px;
-  }
-
   &:hover ${ImageContainer} {
     height: 158px;
   }
 
   &:hover ${Links} {
     bottom: 0;
+  }
+
+  @media (max-width: 1230px) {
+    width: 330px;
+    height: 515px;
+    margin-bottom: 42px;
+
+    &:hover ${Links} {
+      bottom: unset;
+    }
+  }
+
+  @media (max-width: 480px) {
+    width: 288px;
+    height: 462px;
+    margin-bottom: 55px;
+
+    &:hover ${ImageContainer} {
+      height: 160px;
+    }
   }
 `;
 
@@ -102,7 +110,7 @@ export const Information = styled.div`
   min-height: 305px;
   box-sizing: border-box;
 
-  @media (max-width: 1280px) {
+  @media (max-width: 1230px) {
     padding-bottom: 10px;
     height: 277px;
     min-height: unset;
@@ -143,7 +151,7 @@ export const Authors = styled.p`
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
 
-  @media (max-width: 1280px) {
+  @media (max-width: 1230px) {
     margin-bottom: 12px;
   }
 
