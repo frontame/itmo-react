@@ -109,7 +109,7 @@ export const NavList = styled.ul`
 
   li {
     box-sizing: border-box;
-    width: 100px;
+    min-width: 100px;
     height: 44px;
 
     margin: 0;
