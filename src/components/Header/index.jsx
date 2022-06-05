@@ -21,7 +21,7 @@ const Header = () => {
   return (
     <Container>
       <Nav toggle={toggle}>
-        <Logo />
+        <Logo toggle={toggle} />
         <NavBtn toggle={toggle} onClick={toggleMenu}>
           <span />
           <span />

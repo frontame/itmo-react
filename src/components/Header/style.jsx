@@ -33,6 +33,7 @@ export const Nav = styled.nav`
         css`
           align-items: flex-end;
           flex-direction: column;
+          justify-content: center;
         `
       );
     }}
@@ -195,9 +196,24 @@ export const Logo = styled.div`
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+
+    ${(props) => {
+      return (
+        props.toggle &&
+        css`
+          top: 50%;
+          left: 0%;
+          transform: translate(0%, -50%);
+
+          padding-left: 75px;
+        `
+      );
+    }}
   }
 
   @media (max-width: 500px) {
+    padding-left: 30px;
+
     width: 71px;
     height: 24px;
     background-image: url(${logoMobile});
