@@ -28,6 +28,7 @@ const GlobalStyles = createGlobalStyle`
     --header-24: 600 24px/33px OpenSans;
     --header-18: 600 18px/30px OpenSans;
     --header-16: 600 16px/22px OpenSans;
+    --header-14-24: 600 14px/24px OpenSans;
     --header-14: 600 14px/19px OpenSans;
     --header-12: 600 12px/16px OpenSans;
     --header-10: 600 10px/14px OpenSans;

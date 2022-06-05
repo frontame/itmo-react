@@ -4,7 +4,6 @@ import logoTablet from '../../images/LogoTablet.png';
 import logoMobile from '../../images/LogoMobile.png';
 
 export const Container = styled.header`
-  /* background-color: var(--bg-color-dark-blue); */
   background-color: ${(props) => {
     return props.theme.bgColorPrimaryDark;
   }};
@@ -14,7 +13,7 @@ export const Nav = styled.nav`
   box-sizing: border-box;
   width: 100%;
   max-width: 1440px;
-  padding-block: 20px;
+  padding-block: 13px;
   margin: 0 auto;
 
   display: flex;
@@ -22,9 +21,11 @@ export const Nav = styled.nav`
   justify-content: space-around;
 
   position: relative;
+  z-index: 10;
 
   @media (max-width: 1000px) {
     justify-content: flex-start;
+    min-height: 60px;
 
     ${(props) => {
       return (
@@ -32,9 +33,14 @@ export const Nav = styled.nav`
         css`
           align-items: flex-end;
           flex-direction: column;
+          justify-content: center;
         `
       );
     }}
+  }
+
+  @media (max-width: 400px) {
+    min-height: 45px;
   }
 `;
 
@@ -103,8 +109,8 @@ export const NavList = styled.ul`
 
   li {
     box-sizing: border-box;
-    width: 100px;
-    height: 42px;
+    min-width: 100px;
+    height: 44px;
 
     margin: 0;
     padding: 0;
@@ -118,6 +124,11 @@ export const NavList = styled.ul`
     &:hover {
       cursor: pointer;
       border-bottom: 2px solid var(--color-emerald);
+
+      a {
+        font: var(--header-14-24);
+        letter-spacing: var(--letter-spacing-1);
+      }
     }
   }
 
@@ -146,7 +157,14 @@ export const NavList = styled.ul`
         `
       );
     }}
+
+    &:hover {
+      a {
+        font: var(--header-14);
+      }
+    }
   }
+
   @media (max-width: 500px) {
     li {
       padding-left: 16px;
@@ -178,9 +196,24 @@ export const Logo = styled.div`
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+
+    ${(props) => {
+      return (
+        props.toggle &&
+        css`
+          top: 50%;
+          left: 0%;
+          transform: translate(0%, -50%);
+
+          padding-left: 75px;
+        `
+      );
+    }}
   }
 
   @media (max-width: 500px) {
+    padding-left: 30px;
+
     width: 71px;
     height: 24px;
     background-image: url(${logoMobile});
