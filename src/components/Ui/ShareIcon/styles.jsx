@@ -21,6 +21,9 @@ const StyledShareIcon = styled(CardButton)`
   &:hover {
     cursor: pointer;
   }
+  @media screen and (max-width: 1230px) {
+    display: none;
+  }
 `;
 
 export default StyledShareIcon;

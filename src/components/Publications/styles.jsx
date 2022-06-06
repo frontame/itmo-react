@@ -6,7 +6,7 @@ export const Section = styled.section`
   }};
   padding: 80px 0 370px;
 
-  @media (max-width: 1280px) {
+  @media (max-width: 1230px) {
     padding-top: 60px;
     padding-bottom: 290px;
   }
@@ -34,7 +34,7 @@ export const Title = styled.h2`
   margin: 0 0 30px;
   text-align: center;
 
-  @media (max-width: 1280px) {
+  @media (max-width: 1230px) {
     font: var(--header-24);
     margin-bottom: 40px;
   }
@@ -42,22 +42,5 @@ export const Title = styled.h2`
   @media (max-width: 480px) {
     font: var(--header-16);
     margin-bottom: 20px;
-  }
-`;
-
-export const ScrollContainer = styled.div`
-  overflow-x: auto;
-  overflow-y: hidden;
-`;
-
-export const ScrollList = styled.ul`
-  list-style: none;
-  margin: 0;
-  display: inline-grid;
-  column-gap: 30px;
-  grid-auto-flow: column;
-
-  @media (max-width: 480px) {
-    column-gap: 8px;
   }
 `;

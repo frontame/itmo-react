@@ -1,24 +1,18 @@
-import { useCallback, useEffect, useRef, useState } from 'react';
+/* eslint-disable react/jsx-curly-brace-presence */
+import { useCallback, useRef } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from 'swiper';
 import 'swiper/css';
 import 'swiper/css/pagination';
-import {
-  Section,
-  Container,
-  Title,
-  ScrollContainer,
-  ScrollList,
-} from './styles';
+import { Section, Container, Title } from './styles';
 import store from '../../store/store';
 import SwipeButton from '../Ui/SwipeButton';
 import HideSwiperButton from '../HideSwiperButton';
 import Publication from '../Publication';
+import './styles.css';
 
 const Publications = () => {
   const { data } = store.publications;
-
-  const [swiperEnabled, setSwiperEnabled] = useState(true);
 
   const prevButtonRef = useRef(null);
   const nextButtonRef = useRef(null);
@@ -31,20 +25,12 @@ const Publications = () => {
     nextButtonRef.current.click();
   }, [nextButtonRef]);
 
-  useEffect(() => {
-    const screenWidth = document.documentElement.clientWidth;
-
-    if (screenWidth < 1280) setSwiperEnabled(false);
-  }, []);
-
   return (
     <Section>
       <Container>
         <Title>Публикации</Title>
-
-        {swiperEnabled > 0 ? (
+        {
           <>
-            {/* Desktop version with swiperjs */}
             <SwipeButton
               design="light"
               direction="prev"
@@ -56,10 +42,22 @@ const Publications = () => {
               onClick={handleNextClick}
             />
             <Swiper
-              spaceBetween={30}
-              slidesPerView={3}
-              pagination
+              pagination={{
+                clickable: true,
+              }}
+              slidesPerView="auto"
+              breakpoints={{
+                768: {
+                  centeredSlides: false,
+                  spaceBetween: 30,
+                },
+                320: {
+                  centeredSlides: true,
+                  spaceBetween: 8,
+                },
+              }}
               modules={[Pagination]}
+              className="mySwiper"
             >
               <HideSwiperButton direction="prev" refProp={prevButtonRef} />
               <HideSwiperButton direction="next" refProp={nextButtonRef} />
@@ -72,16 +70,7 @@ const Publications = () => {
               })}
             </Swiper>
           </>
-        ) : (
-          <ScrollContainer>
-            {/* Tablet and mobile version without swiperjs */}
-            <ScrollList>
-              {data.map((publication) => {
-                return <Publication data={publication} key={publication.uid} />;
-              })}
-            </ScrollList>
-          </ScrollContainer>
-        )}
+        }
       </Container>
     </Section>
   );
