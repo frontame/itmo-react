@@ -45,6 +45,7 @@ const Publications = () => {
               pagination={{
                 clickable: true,
               }}
+              slidesPerView="auto"
               breakpoints={{
                 768: {
                   centeredSlides: false,
@@ -53,7 +54,6 @@ const Publications = () => {
                 320: {
                   centeredSlides: true,
                   spaceBetween: 8,
-                  slidesPerView: 'auto',
                 },
               }}
               modules={[Pagination]}
