@@ -1,0 +1,15 @@
+.swiper-slide {
+  max-width: 348px;
+}
+
+@media (max-width: 1230px) {
+  .swiper-slide {
+    max-width: 330px;
+  }
+}
+
+@media (max-width: 480px) {
+  .swiper-slide {
+    max-width: 288px;
+  }
+}
