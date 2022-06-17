@@ -3,6 +3,7 @@ import { observer } from 'mobx-react';
 import Header from '../Header';
 import Industrial from '../Industrial';
 import Publications from '../Publications';
+import Partners from '../Partners';
 import CallToAction from '../CallToAction';
 import Footer from '../Footer';
 // import store from '../../store/store'
@@ -13,6 +14,7 @@ const App = () => {
       <Header />
       <Industrial />
       <Publications />
+      <Partners />
       <CallToAction />
       <Footer />
     </>
