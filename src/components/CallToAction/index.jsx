@@ -1,6 +1,7 @@
 /* eslint-disable react/jsx-props-no-spreading */
 
 import { useForm } from 'react-hook-form';
+import Input from '../Input';
 import { Section, Container, Title, TextContainer } from './style';
 
 const CallToAction = () => {
@@ -21,6 +22,7 @@ const CallToAction = () => {
   });
 
   const onSubmit = (data) => {
+    // eslint-disable-next-line no-alert
     alert(JSON.stringify(data));
     reset();
   };
@@ -36,47 +38,38 @@ const CallToAction = () => {
         </TextContainer>
         <form onSubmit={handleSubmit(onSubmit)}>
           <fieldset>
-            <input
+            <Input
+              label="name"
               type="text"
-              placeholder="Имя*"
-              {...register('name', {
-                required: 'Поле обязательно для заполнения',
-                minLength: {
-                  value: 3,
-                  message: 'Минимум 3 символа',
-                },
-              })}
-              style={
-                errors?.name && { background: '#FFAAAA', color: '#000000' }
-              }
-              title={errors?.name?.message || 'Ошибка заполнения поля'}
+              placeholder="Имя"
+              register={register}
+              isError={errors}
+              minLength={2}
+              required
             />
-            <input
+            <Input
+              label="surname"
               type="text"
               placeholder="Фамилия"
-              {...register('surname', {
-                minLength: {
-                  value: 3,
-                  message: 'Минимум 3 символа',
-                },
-              })}
-              style={
-                errors?.surname && { background: '#FFAAAA', color: '#000000' }
-              }
-              title={errors?.surname?.message || 'Ошибка заполнения поля'}
+              register={register}
+              isError={errors}
+              minLength={2}
             />
-            <input type="tel" placeholder="Телефон" {...register('phone')} />
-            <input
+            <Input
+              label="phone"
+              type="tel"
+              placeholder="Телефон"
+              register={register}
+              isError={errors}
+              minLength={5}
+            />
+            <Input
+              label="email"
               type="email"
-              placeholder="E-mail*"
-              {...register('email', {
-                required: 'Поле обязательно для заполнения',
-                pattern: /^[A-Z0-9._%+-]+@[A-Z0-9-]+.+.[A-Z]{2,4}$/i,
-              })}
-              style={
-                errors?.email && { background: '#FFAAAA', color: '#000000' }
-              }
-              title={errors?.email?.message || 'Ошибка заполнения поля'}
+              placeholder="E-mail"
+              register={register}
+              isError={errors}
+              required
             />
           </fieldset>
           <textarea
