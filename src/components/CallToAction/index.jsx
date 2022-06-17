@@ -2,6 +2,7 @@
 
 import { useForm } from 'react-hook-form';
 import Input from '../Input';
+import TextArea from '../TextArea';
 import { Section, Container, Title, TextContainer } from './style';
 
 const CallToAction = () => {
@@ -72,15 +73,13 @@ const CallToAction = () => {
               required
             />
           </fieldset>
-          <textarea
-            placeholder="Сообщение*"
-            {...register('message', {
-              required: 'Поле обязательно для заполнения',
-            })}
-            style={
-              errors?.message && { background: '#FFAAAA', color: '#000000' }
-            }
-            title={errors?.message?.message || 'Ошибка заполнения поля'}
+          <TextArea
+            label="message"
+            placeholder="Сообщение"
+            register={register}
+            isError={errors}
+            minLength={4}
+            required
           />
           <button type="submit">Отправить</button>
         </form>
