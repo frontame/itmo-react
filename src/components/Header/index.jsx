@@ -34,13 +34,13 @@ const Header = () => {
           <NavLink>
             <a href="#">Проекты</a>
           </NavLink>
-          <NavLink opened={opened} onClick={toggleLink}>
+          <NavLink onClick={toggleLink}>
             <a href="#">Образование</a>
-            <div>
-              <a href="#">Аспирантура</a>
-              <a href="#">Магистратура</a>
-            </div>
           </NavLink>
+          <div>
+            <a href="#">Аспирантура</a>
+            <a href="#">Магистратура</a>
+          </div>
           <NavLink>
             <a href="#">Публикации</a>
           </NavLink>

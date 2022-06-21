@@ -106,6 +106,54 @@ export const NavList = styled.ul`
   align-items: center;
   justify-content: space-between;
   gap: 20px;
+  position: relative;
+
+  div {
+    box-sizing: border-box;
+    width: 120px;
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 57px;
+    left: 360px;
+    background-color: var(--color-dark-blue);
+
+    a {
+      padding: 5px 17px 5px 8px;
+      margin: 0;
+      text-decoration: none;
+      font: var(--main-14-19);
+      color: var(--color-white);
+    }
+  }
+
+  ${(props) => {
+    return (
+      props.opened &&
+      css`
+        div {
+          display: flex;
+          a {
+            &:hover {
+              cursor: pointer;
+              background-color: var(--color-emerald);
+              font: var(--header-14-24);
+              letter-spacing: var(--letter-spacing-1);
+            }
+          }
+        }
+      `
+    );
+  }}
+
+  @media (max-width: 1000px) {
+    div {
+      width: 100%;
+      padding-left: 35px;
+      position: static;
+      justify-content: flex-start;
+    }
+  }
 
   li {
     box-sizing: border-box;
@@ -183,44 +231,6 @@ export const NavLink = styled.li`
       letter-spacing: var(--letter-spacing-1);
     }
   }
-
-  div {
-    box-sizing: border-box;
-    width: 120px;
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 60px;
-    background-color: var(--color-dark-blue);
-
-    a {
-      padding: 5px 17px 5px 8px;
-    }
-
-    &:hover {
-      font: var(--main-14-19);
-    }
-  }
-
-  ${(props) => {
-    return (
-      props.opened &&
-      css`
-        div {
-          display: flex;
-
-          a {
-            &:hover {
-              cursor: pointer;
-              background-color: var(--color-emerald);
-              font: var(--header-14-24);
-              letter-spacing: var(--letter-spacing-1);
-            }
-          }
-        }
-      `
-    );
-  }}
 `;
 
 export const Logo = styled.div`
