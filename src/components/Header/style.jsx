@@ -7,18 +7,30 @@ export const Container = styled.header`
   background-color: ${(props) => {
     return props.theme.bgColorPrimaryDark;
   }};
+`;
 
-  ${(props) => {
-    return (
-      props.toggle &&
-      css`
-        
-      `
-    )
-  }}
+export const Overlay = styled.div`
+  @media (max-width: 1000px) {
+    position: relative;
+    z-index: 9;
+    ${(props) => {
+      return (
+        props.toggle &&
+        css`
+          position: absolute;
+          height: 100vh;
+          width: 100vw;
+          background-color: black;
+          opacity: 0.5;
+        `
+      );
+    }}
+  }
 `;
 
 export const Nav = styled.nav`
+  position: relative;
+  z-index: 10;
   box-sizing: border-box;
   width: 100%;
   max-width: 1440px;
@@ -157,9 +169,32 @@ export const NavList = styled.ul`
   @media (max-width: 1000px) {
     div {
       width: 100%;
-      padding-left: 35px;
       position: static;
       justify-content: flex-start;
+      a {
+        box-sizing: border-box;
+        min-width: 100px;
+        height: 44px;
+
+        margin: 0;
+        padding: 0;
+        padding-left: 40px;
+
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+
+        border-bottom: 2px solid transparent;
+
+        opacity: 0.6;
+
+        &:hover {
+          cursor: pointer;
+          border-bottom: 2px solid var(--color-emerald);
+          background-color: transparent;
+          opacity: 1;
+        }
+      }
     }
   }
 

@@ -1,15 +1,19 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 
-import { useCallback, useState, useEffect } from 'react';
-import { Logo, Container, Nav, NavBtn, NavList, NavLink } from './style';
+import { useCallback, useState } from 'react';
+import {
+  Logo,
+  Container,
+  Nav,
+  NavBtn,
+  NavList,
+  NavLink,
+  Overlay,
+} from './style';
 
 const Header = () => {
   const [toggle, setToggle] = useState(false);
   const [opened, setOpened] = useState(false);
-
-  useEffect(() => {
-    if (toggle === false) setOpened(false);
-  });
 
   const toggleMenu = useCallback(() => {
     setToggle(!toggle);
@@ -56,6 +60,7 @@ const Header = () => {
           </NavLink>
         </NavList>
       </Nav>
+      <Overlay toggle={toggle} />
     </Container>
   );
 };
