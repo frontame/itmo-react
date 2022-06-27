@@ -1,6 +1,23 @@
+import styled from 'styled-components';
+
+const StyledSvg = styled.svg`
+  width: 195px;
+  height: 48px;
+
+  @media (max-width: 1110px) {
+    width: 140px;
+    height: 32px;
+  }
+
+  @media (max-width: 770px) {
+    width: 80px;
+    height: 20px;
+  }
+`;
+
 const SberbankLogo = () => {
   return (
-    <svg
+    <StyledSvg
       width="195"
       height="48"
       viewBox="0 0 195 48"
@@ -83,7 +100,7 @@ const SberbankLogo = () => {
           />
         </clipPath>
       </defs>
-    </svg>
+    </StyledSvg>
   );
 };
 
