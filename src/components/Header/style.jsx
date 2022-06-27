@@ -7,6 +7,15 @@ export const Container = styled.header`
   background-color: ${(props) => {
     return props.theme.bgColorPrimaryDark;
   }};
+
+  ${(props) => {
+    return (
+      props.toggle &&
+      css`
+        
+      `
+    )
+  }}
 `;
 
 export const Nav = styled.nav`
@@ -137,8 +146,7 @@ export const NavList = styled.ul`
             &:hover {
               cursor: pointer;
               background-color: var(--color-emerald);
-              font: var(--header-14-24);
-              letter-spacing: var(--letter-spacing-1);
+              font-weight: 600;
             }
           }
         }
@@ -200,12 +208,6 @@ export const NavList = styled.ul`
         `
       );
     }}
-
-    &:hover {
-      a {
-        font: var(--header-14);
-      }
-    }
   }
 
   @media (max-width: 500px) {
@@ -220,16 +222,17 @@ export const NavLink = styled.li`
   padding: 0;
   position: relative;
 
+  font: var(--main-14-19);
+
   a {
     margin: 0;
-    text-decoration: none;
-    font: var(--main-14-19);
     color: var(--color-white);
+    text-decoration: none;
+  }
 
-    &:hover {
-      font: var(--header-14);
-      letter-spacing: var(--letter-spacing-1);
-    }
+  &:hover {
+    font: var(--header-14);
+    letter-spacing: var(--letter-spacing-1);
   }
 `;
 
