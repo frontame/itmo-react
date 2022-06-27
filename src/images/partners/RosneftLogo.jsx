@@ -1,6 +1,23 @@
+import styled from 'styled-components';
+
+const StyledSvg = styled.svg`
+  width: 143px;
+  height: 48px;
+
+  @media (max-width: 1110px) {
+    width: 95px;
+    height: 32px;
+  }
+
+  @media (max-width: 770px) {
+    width: 89px;
+    height: 30px;
+  }
+`;
+
 const RosneftLogo = () => {
   return (
-    <svg
+    <StyledSvg
       width="143"
       height="48"
       viewBox="0 0 143 48"
@@ -25,7 +42,7 @@ const RosneftLogo = () => {
         d="M14.7257 48V38.6732V23.2579H16.8345H18.9434V38.6732V48H16.8345H14.7257Z"
         fill="white"
       />
-    </svg>
+    </StyledSvg>
   );
 };
 

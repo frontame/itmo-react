@@ -1,6 +1,23 @@
+import styled from 'styled-components';
+
+const StyledSvg = styled.svg`
+  width: 151px;
+  height: 48px;
+
+  @media (max-width: 1110px) {
+    width: 100px;
+    height: 32px;
+  }
+
+  @media (max-width: 770px) {
+    width: 63px;
+    height: 20px;
+  }
+`;
+
 const MailLogo = () => {
   return (
-    <svg
+    <StyledSvg
       width="151"
       height="48"
       viewBox="0 0 151 48"
@@ -75,7 +92,7 @@ const MailLogo = () => {
           />
         </clipPath>
       </defs>
-    </svg>
+    </StyledSvg>
   );
 };
 

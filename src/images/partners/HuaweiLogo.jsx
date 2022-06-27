@@ -1,6 +1,23 @@
+import styled from 'styled-components';
+
+const StyledSvg = styled.svg`
+  width: 220px;
+  height: 48px;
+
+  @media (max-width: 1110px) {
+    width: 146px;
+    height: 32px;
+  }
+
+  @media (max-width: 770px) {
+    width: 91.4px;
+    height: 20px;
+  }
+`;
+
 const HuaweiLogo = () => {
   return (
-    <svg
+    <StyledSvg
       width="220"
       height="48"
       viewBox="0 0 220 48"
@@ -27,7 +44,7 @@ const HuaweiLogo = () => {
           />
         </clipPath>
       </defs>
-    </svg>
+    </StyledSvg>
   );
 };
 
