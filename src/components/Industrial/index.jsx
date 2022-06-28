@@ -17,8 +17,12 @@ import Researchers from '../../images/industrial/researchers.jpg';
 import Card from '../IndustrialCard';
 import ShareIcon from '../Ui/ShareIcon';
 
-const Industrial = () => {
+const Industrial = ({ setSelectedCard }) => {
   const { data } = store.industrials;
+
+  const openPopup = (card) => {
+    setSelectedCard(card);
+  };
 
   return (
     <Section>
@@ -48,7 +52,7 @@ const Industrial = () => {
         </ClabContent>
         <LinesCard>
           {data.map((card) => {
-            return <Card key={card.id} card={card} />;
+            return <Card key={card.id} card={card} openPopup={openPopup} />;
           })}
         </LinesCard>
       </Container>
