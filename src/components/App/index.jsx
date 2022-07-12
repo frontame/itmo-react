@@ -8,6 +8,7 @@ import Partners from '../Partners';
 import CallToAction from '../CallToAction';
 import Footer from '../Footer';
 import Popup from '../Popup';
+import About from '../About';
 // import store from '../../store/store'
 
 const App = () => {
@@ -16,6 +17,7 @@ const App = () => {
   return (
     <>
       <Header />
+      <About />
       <Industrial setSelectedCard={setSelectedCard} />
       {selectedCard && (
         <Popup
