@@ -122,13 +122,15 @@ export const CardsHeading = styled.h2`
 export const CardsIntro = styled.p`
   margin: 0 auto;
 
-  max-width: 65%;
+  max-width: 907px;
   padding-block: 30px 45px;
   font: var(--main-18);
 
-  @media (max-width: 768px) {
+  @media (max-width: 1050px) {
     max-width: 90%;
+  }
 
+  @media (max-width: 768px) {
     font: var(--main-14-20);
   }
 
@@ -138,6 +140,7 @@ export const CardsIntro = styled.p`
 `;
 export const CardsList = styled.div`
   margin: 0 auto;
+
   max-width: 1110px;
   display: flex;
   justify-content: space-between;
@@ -146,7 +149,12 @@ export const CardsList = styled.div`
   color: var(--color-blue);
   overflow-x: scroll;
 
+  @media (max-width: 1220px) {
+    margin-inline: 39px;
+  }
+
   @media (max-width: 768px) {
+    margin: 0 auto;
     gap: 30px;
     max-width: 90%;
   }

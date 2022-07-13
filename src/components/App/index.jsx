@@ -1,24 +1,24 @@
 import { observer } from 'mobx-react';
 // components
-// import { useState } from 'react';
-// import Header from '../Header';
-// import Industrial from '../Industrial';
-// import Publications from '../Publications';
-// import Partners from '../Partners';
-// import CallToAction from '../CallToAction';
-// import Footer from '../Footer';
-// import Popup from '../Popup';
+import { useState } from 'react';
+import Header from '../Header';
+import Industrial from '../Industrial';
+import Publications from '../Publications';
+import Partners from '../Partners';
+import CallToAction from '../CallToAction';
+import Footer from '../Footer';
+import Popup from '../Popup';
 import About from '../About';
-// import store from '../../store/store'
+// import store from '../../store/store';
 
 const App = () => {
-  // const [selectedCard, setSelectedCard] = useState(null);
+  const [selectedCard, setSelectedCard] = useState(null);
 
   return (
     <>
-      {/* <Header /> */}
+      <Header />
       <About />
-      {/* <Industrial setSelectedCard={setSelectedCard} />
+      <Industrial setSelectedCard={setSelectedCard} />
       {selectedCard && (
         <Popup
           card={selectedCard}
@@ -30,7 +30,7 @@ const App = () => {
       <Publications />
       <Partners />
       <CallToAction />
-      <Footer /> */}
+      <Footer />
     </>
   );
 };
