@@ -8,7 +8,8 @@ import Partners from '../Partners';
 import CallToAction from '../CallToAction';
 import Footer from '../Footer';
 import Popup from '../Popup';
-// import store from '../../store/store'
+import About from '../About';
+// import store from '../../store/store';
 
 const App = () => {
   const [selectedCard, setSelectedCard] = useState(null);
@@ -16,6 +17,7 @@ const App = () => {
   return (
     <>
       <Header />
+      <About />
       <Industrial setSelectedCard={setSelectedCard} />
       {selectedCard && (
         <Popup
