@@ -160,7 +160,8 @@ export const CardsList = styled.div`
   }
 
   @media (max-width: 500px) {
-    margin-inline: 0;
+    margin-inline: auto;
+    max-width: 100%;
 
     gap: 10px;
   }
@@ -171,14 +172,17 @@ export const Card = styled.div`
   border-radius: 10px;
   padding: 20px;
   min-width: 348px;
+  width: 348px;
 
   @media (max-width: 768px) {
     min-width: 330px;
+    width: 330px;
   }
 
   @media (max-width: 500px) {
     padding: 16px;
     min-width: 288px;
+    width: 288px;
   }
 `;
 export const CardDate = styled.p`
