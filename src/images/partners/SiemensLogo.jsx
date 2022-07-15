@@ -1,6 +1,23 @@
+import styled from 'styled-components';
+
+const StyledSvg = styled.svg`
+  width: 203px;
+  height: 48px;
+
+  @media (max-width: 1000px) {
+    width: 134px;
+    height: 32px;
+  }
+
+  @media (max-width: 400px) {
+    width: 84px;
+    height: 20px;
+  }
+`;
+
 const SiemensLogo = () => {
   return (
-    <svg
+    <StyledSvg
       width="203"
       height="48"
       viewBox="0 0 203 48"
@@ -49,7 +66,7 @@ const SiemensLogo = () => {
         d="M167.265 9.4082V38.2544H158.175L147.975 19.7532V38.2544H142.193V9.4082H151.548L161.484 27.5915V9.4082H167.265Z"
         fill="white"
       />
-    </svg>
+    </StyledSvg>
   );
 };
 
