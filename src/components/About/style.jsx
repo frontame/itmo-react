@@ -147,7 +147,7 @@ export const CardsList = styled.div`
   align-items: center;
   gap: 32px;
   color: var(--color-blue);
-  overflow-x: scroll;
+  /* overflow-x: scroll; */
 
   @media (max-width: 1220px) {
     margin-inline: 39px;
